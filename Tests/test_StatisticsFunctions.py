@@ -9,7 +9,7 @@ from StatisticsFunctions.quartiles import Quartiles
 from StatisticsFunctions.skew import Skew
 from Random.Random import getRandomNums
 from StatisticsFunctions.Covariance import Covariance
-from StatisticsFunctions.zscore import zscore
+from StatisticsFunctions.Zscore import zscore
 from StatisticsFunctions.SampleCorrelation import SampleCorrelation
 from StatisticsFunctions.PopulationCorrelation import PopulationCorrelation
 from StatisticsFunctions.PopulationProportion import PopulationProportion
@@ -20,7 +20,7 @@ class MyTestCase(unittest.TestCase):
         self.testData2 = getRandomNums(3, 1, 100, 20)
 
     def test_StatisticFunctions_Mean(self):
-        self.assertEqual(38.95, Mean.Mean(self.testData))
+        self.assertEqual(38.95, Mean(self.testData))
 
     def test_StatisticFunctions_Median(self):
         self.assertEqual(27.5, Median.median(self.testData))
@@ -46,8 +46,8 @@ class MyTestCase(unittest.TestCase):
     def test_StatisticFunctions_Covariance(self):
         self.assertEqual(-188.54736842105262, Covariance.covariance(self.testData, self.testData2))
 
-    def test_StatisticsFunctions_ZScore(self):
-        self.assertEqual(-0.7555289, zscore.zscore(self.testData))
+    def test_StatisticFunctions_ZScore(self):
+        self.assertEqual(0.7555289, zscore.zscore(self.testData))
 
     def test_StatisticFunctions_PopulationCorrelation(self):
         self.assertEqual(-188.23571467185914, PopulationCorrelation.popCor(self.testData, self.testData2))
