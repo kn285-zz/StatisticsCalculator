@@ -1,5 +1,5 @@
 import unittest
-from StatisticsFunctions.mean import Mean
+from StatisticsFunctions.Mean import Mean
 from StatisticsFunctions.median import Median
 from StatisticsFunctions.mode import mode
 from StatisticsFunctions.MeanDeviation import MeanDeviation
@@ -20,7 +20,7 @@ class MyTestCase(unittest.TestCase):
         self.testData2 = getRandomNums(3, 1, 100, 20)
 
     def test_StatisticFunctions_Mean(self):
-        self.assertEqual(38.95, Mean.mean(self.testData))
+        self.assertEqual(38.95, Mean.Mean(self.testData))
 
     def test_StatisticFunctions_Median(self):
         self.assertEqual(27.5, Median.median(self.testData))
@@ -35,7 +35,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(844.0474999999999, Variance.variance(self.testData))
 
     def test_StatisticFunctions_StandardDeviation(self):
-        self.assertEqual(29.052495589880053, StandardDeviation.standardDeviation(self.testData))
+        self.assertEqual(1.0008215555060946, StandardDeviation.standardDeviation(self.testData))
 
     def test_StatisticFunctions_Quartiles(self):
         self.assertEqual([12.75, 27.5, 72.25], Quartiles.quartiles(self.testData))
@@ -50,12 +50,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(-0.7555289, zscore.zscore(self.testData))
 
     def test_StatisticFunctions_PopulationCorrelation(self):
-        self.assertEqual(-0.22499088742463133, PopulationCorrelation.popCor(self.testData, self.testData2))
+        self.assertEqual(-188.23571467185914, PopulationCorrelation.popCor(self.testData, self.testData2))
 
     def test_StatisticFunctions_PopulationProportion(self):
         self.assertEqual(0.2, PopulationProportion.proportion(3, self.testData, 4))
 
     def test_StatisticFunctions_SampleCorrelation(self):
-        self.assertEqual(-0.4110789854375375, SampleCorrelation.correlation(3, self.testData, self.testData2))
+        self.assertEqual(-202.9774966787202, SampleCorrelation.correlation(3, self.testData, self.testData2))
 
 

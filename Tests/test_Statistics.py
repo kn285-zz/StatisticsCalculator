@@ -2,6 +2,7 @@ import unittest
 from numpy.random import seed
 from numpy.random import randint
 from Statistics.statistics import Statistics
+from Random.Random import getRandomNums
 import pprint
 
 
@@ -23,7 +24,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_mode_calculator(self):
         theMode = self.statistics.mode(self.testData)
-        self.assertEqual(theMode, 2)
+        self.assertEqual(theMode, None)
 
 if __name__ == '__main__':
     unittest.main()

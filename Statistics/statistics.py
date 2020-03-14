@@ -1,7 +1,7 @@
 from Calculator.Calculator import Calculator
-from Statistics.mean import Mean
-from Statistics.mode import mode
-from Statistics.median import Median
+from StatisticsFunctions.Mean import Mean
+from StatisticsFunctions.mode import mode
+from StatisticsFunctions.median import Median
 
 class Statistics(Calculator):
 

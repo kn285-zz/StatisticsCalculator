@@ -1,5 +1,5 @@
 import unittest
-from RandomData.RandomData import getRandomNums
+from Random.Random import getRandomNums
 from RandomGenerator.RandomList import RandomList
 from RandomGenerator.randomNoSeed import RandomNoSeed
 from RandomGenerator.RandomWithSeed import RandomWithSeed

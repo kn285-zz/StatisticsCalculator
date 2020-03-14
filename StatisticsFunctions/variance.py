@@ -1,7 +1,7 @@
 from numpy import absolute, asarray
-from StatisticsFunctions.mean import Mean
+from StatisticsFunctions import Mean
 
 class Variance:
     @staticmethod
     def variance(data):
-        return Mean.mean(absolute(asarray(data) - Mean.mean(data))**2)
+        return Mean.Mean(absolute(asarray(data) - Mean.Mean(data))**2)

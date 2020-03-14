@@ -1,7 +1,7 @@
 from numpy import absolute, asarray
-from StatisticsFunctions.mean import Mean
+from StatisticsFunctions.Mean import Mean
 
 class MeanDeviation:
    @staticmethod
    def meanDeviation(data):
-      return Mean.Mean(absolute(asarray(data) - Mean.Mean(data)))
+      return Mean(absolute(asarray(data) - Mean(data)))
