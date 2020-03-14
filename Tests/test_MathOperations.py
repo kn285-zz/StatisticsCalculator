@@ -6,6 +6,7 @@ from MathOperations.multiplication import Multiplication
 from MathOperations.division import Division
 from MathOperations.squareroot import Squareroot
 from MathOperations.square import Square
+from MathOperations.logarithm import logarithm
 
 
 
@@ -43,6 +44,8 @@ class MyTestCase(unittest.TestCase):
         sqList=[2]
         self.assertEqual(4, Square.square(sqList))
 
+    def test_MathOperations_logarithm(self):
+        self.assertEqual(2, logarithm.log(100, 10))
 
 
 

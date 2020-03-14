@@ -1,7 +1,7 @@
 from Calculator.Calculator import Calculator
 from Statistics.mean import Mean
-
-from MathOperations.rand_num import rand_num;
+from Statistics.mode import mode
+from Statistics.median import Median
 
 class Statistics(Calculator):
 
@@ -9,7 +9,9 @@ class Statistics(Calculator):
         self.Result = Mean(data)
         return self.Result
 
+    def median(self, data):
+        self.result = Median.median(data)
+        return self.result
 
-    def Random_int_nums(self, a, b, c, d):
-        self.Result = rand_num.random_int_generator(a,b,c,d)
-        return self.Result
+    def mode(self, data):
+        self.result = mode.mode(data)
